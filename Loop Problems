@@ -1,0 +1,102 @@
+/*1. Create a program that asks the user to enter a positive integer N. Use a loop to print all numbers from 1
+to N.*/
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter N: ");
+        int n = sc.nextInt();
+
+        for (int i = 1; i <= n; i++) {
+            System.out.print(i + " ");
+        }
+    }
+}
+
+/* 2. Create a program that asks the user to enter a positive integer N. Use a loop to calculate the sum of all
+numbers from 1 to N. */
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter N: ");
+        int n = sc.nextInt();
+
+        int sum = 0;
+
+        for (int i = 1; i <= n; i++) {
+            sum = sum + i;
+        }
+
+        System.out.println("Sum: " + sum);
+    }
+}
+
+/* 3. Create a program that asks the user to enter a number. Use a loop to display its multiplication table from
+1 to 10. */
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter number: ");
+        int n = sc.nextInt();
+
+        for (int i = 1; i <= 10; i++) {
+            System.out.println(n + " x " + i + " = " + (n * i));
+        }
+    }
+}
+
+/* 4. Create a program that asks the user to enter a non-negative integer. Use a loop to calculate its factorial.*/
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter number: ");
+        int n = sc.nextInt();
+
+        int factorial = 1;
+
+        for (int i = 1; i <= n; i++) {
+            factorial = factorial * i;
+        }
+
+        System.out.println("Factorial: " + factorial);
+    }
+}
+
+/* 5. Create a program that asks the user to enter an integer. Use a loop to reverse its digits and display the
+reversed number. */
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter number: ");
+        int n = sc.nextInt();
+
+        int reverse = 0;
+
+        while (n != 0) {
+            int digit = n % 10;
+            reverse = reverse * 10 + digit;
+            n = n / 10;
+        }
+
+        System.out.println("Reversed number: " + reverse);
+    }
+}
