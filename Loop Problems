@@ -100,3 +100,143 @@ public class Main {
         System.out.println("Reversed number: " + reverse);
     }
 }
+
+
+/* 6.Create a program that asks the user to enter an integer and prints the number in reverse order. Solve the
+problem using a loop without converting the number to a String.*/
+
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter number: ");
+        int num = sc.nextInt();
+        int reverse = 0;
+
+        while (num != 0) {
+            int digit = num % 10;
+            reverse = reverse * 10 + digit;
+            num = num / 10;
+        }
+
+        System.out.println("Reverse: " + reverse);
+    }
+}
+
+/* 7. Create a program that asks the user to enter an integer and checks whether the number is a palindrome.
+Use a loop to reverse the number and compare it with the original number.*/
+
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter number: ");
+        int num = sc.nextInt();
+
+        int original = num;
+        int reverse = 0;
+
+        while (num != 0) {
+            int digit = num % 10;
+            reverse = reverse * 10 + digit;
+            num = num / 10;
+        }
+
+        if (original == reverse) {
+            System.out.println("Palindrome: Yes");
+        } else {
+            System.out.println("Palindrome: No");
+        }
+    }
+}
+
+/* 8. Create a program that asks the user to enter a starting number and an ending number. Display all prime
+numbers within the given range. Use loops to determine whether each number is prime.*/
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Start: ");
+        int start = sc.nextInt();
+
+        System.out.print("End: ");
+        int end = sc.nextInt();
+
+        System.out.print("Prime numbers: ");
+
+        for (int num = start; num <= end; num++) {
+            if (num < 2)
+                continue;
+
+            boolean prime = true;
+
+            for (int i = 2; i <= num / 2; i++) {
+                if (num % i == 0) {
+                    prime = false;
+                    break;
+                }
+            }
+
+            if (prime) {
+                System.out.print(num + " ");
+            }
+        }
+    }
+}
+
+/* 9. Create a program that asks the user to enter the number of terms and prints the Fibonacci series for that
+many terms using a loop.*/
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter number of terms: ");
+        int n = sc.nextInt();
+
+        int a = 0, b = 1;
+
+        System.out.print("Fibonacci: ");
+
+        for (int i = 1; i <= n; i++) {
+            System.out.print(a + " ");
+            
+            int c = a + b;
+            a = b;
+            b = c;
+        }
+    }
+}
+
+/* 10. Create a program that asks the user to enter the number of rows and prints the following pattern using
+nested loops.*/
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter rows: ");
+        int rows = sc.nextInt();
+
+        for (int i = 1; i <= rows; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
+
